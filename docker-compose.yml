@@ -1,0 +1,36 @@
+
+
+services:
+    web:
+        build: ./backend
+        env_file: .env
+        depends_on:
+            - db
+        expose:
+            - "8000"
+        restart: always
+        volumes:
+            - .:/app
+    db:
+        image: postgres:15
+        environment:
+            POSTGRES_USER: ${DATABASE_USERNAME}
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_DB: ${DATABASE_NAME}    
+        volumes:
+             - postgres_data:/var/lib/postgresql/data
+        restart: always
+
+    nginx:
+        image: nginx:alpine
+        ports:
+            - "80:80"
+            - "443:443"    
+        volumes:
+            - ./nginx:/etc/nginx/conf.d
+            - /etc/letsencrypt:/etc/letsencrypt:ro    
+        depends_on:
+            - web
+        restart: always
+    volumes:
+    postgres_data:       
