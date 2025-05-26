@@ -1,0 +1,11 @@
+1- python -m venv venv    created the environment for my appplication
+2-installed fastapi[all] and psycop2 and alembic then alembic init alembic
+* dont forget to create __init__.py inside app folder
+3-created app folder inside it models,schemas,config,database
+4- modfied the alembic ini and alembic .env
+5- after finishing the database stuff now install 
+6- pip install python-jose[cryptography] passlib[bcrypt]
+7-make utils.py and put the logic on it #pwd_context
+8-make the routers folder and inside it put the routers you want eg (auth.py,users.py)
+9-inside those import apirouter from fastapi then make router=apirouter(prefix,tags)
+
