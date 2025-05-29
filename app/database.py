@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base,sessionmaker
 from app.config import settings
 
 #SQL_ALCHEMY_URL=f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}"
-SQL_ALCHEMY_URL="postgresql://postgres:********@centerbeam.proxy.rlwy.net:50015/railway"
+SQL_ALCHEMY_URL="postgresql://postgres:eUigYHvanXQjidOYijnXIYPWvMfJEvQN@centerbeam.proxy.rlwy.net:50015/railway"
 
 
 
