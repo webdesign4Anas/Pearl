@@ -8,7 +8,7 @@ from app.config import settings
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
-config.set_main_option("sqlalchemy.url",f"postgresql://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}")
+config.set_main_option("sqlalchemy.url","postgresql://postgres:eUigYHvanXQjidOYijnXIYPWvMfJEvQN@centerbeam.proxy.rlwy.net:50015/railway")
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 if config.config_file_name is not None:
